@@ -1,0 +1,249 @@
+:root {
+    --dark-blue: #0A0B1F;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: var(--gray);
+}
+
+.side-nav {
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--white);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-items {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-items span {
+    cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+main {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+.hero {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    min-height: 80vh;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.cta-button {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+.hero-image {
+    max-width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.about {
+    padding: 4rem;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Добавляем новые стили для страницы рецептов */
+.recipes-header {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 3rem 4rem;
+}
+
+.recipes-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+.recipes-grid {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 1.5rem;
+}
+
+.recipe-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-blue);
+}
+
+.recipe-content p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.recipe-btn {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.recipe-btn:hover {
+    opacity: 0.9;
+}
+
+/* Обновляем медиа-запросы */
+@media (max-width: 768px) {
+    .recipes-header {
+        padding: 2rem;
+    }
+    
+    .recipes-grid {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Добавляем стили для ссылок в навигации */
+.nav-items a {
+    color: inherit;
+    text-decoration: none;
+} 

@@ -1,0 +1,450 @@
+/* Стили для поиска */
+.search-bar {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.search-btn {
+    padding: 0 1.5rem;
+    background: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Стили для фильтров */
+.filters {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-select option {
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+/* Улучшенные стили для карточек рецептов */
+.recipe-card {
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.recipe-favorite {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.9);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.recipe-favorite:hover {
+    transform: scale(1.1);
+}
+
+.recipe-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.recipe-stats {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+}
+
+.pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--dark-blue);
+    background: var(--white);
+    color: var(--dark-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn.active,
+.pagination-btn:hover {
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .search-bar {
+        margin: 1rem 0;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .recipe-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Популярные теги */
+.popular-tags {
+    margin: 1rem 0;
+    color: var(--white);
+}
+
+.tag-link {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tag-link:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+/* Рецепт недели */
+.featured-recipe {
+    background: linear-gradient(to right, var(--dark-blue), #1a1b3f);
+    color: var(--white);
+    padding: 3rem 4rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: 2rem;
+    border-radius: 8px;
+}
+
+.featured-content {
+    flex: 1;
+}
+
+.featured-label {
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.featured-image {
+    flex: 1;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.featured-meta {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.featured-btn {
+    background: var(--white);
+    color: var(--dark-blue);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.featured-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Новый рецепт */
+.new-recipe {
+    position: relative;
+}
+
+.new-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #ff4757;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Тематические подборки */
+.recipe-collections {
+    padding: 4rem;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.collection-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.05);
+}
+
+.collection-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
+/* Адаптивность для новых элементов */
+@media (max-width: 768px) {
+    .featured-recipe {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .featured-image img {
+        height: 200px;
+    }
+
+    .collections-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Активные состояния */
+.recipe-favorite.active {
+    background-color: #ff4757;
+    color: white;
+}
+
+.category-btn.active {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+/* Анимации */
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Состояния при наведении */
+.comment-btn:hover,
+.pagination-btn:hover,
+.servings-btn:hover {
+    opacity: 0.9;
+}
+
+/* Стили для поиска */
+.search-bar input:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.4);
+}
+
+/* Стили для фильтров */
+.filter-select:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.4);
+}
+
+/* Стили для чекбоксов в ингредиентах */
+.ingredients-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.ingredients-list input[type="checkbox"]:checked + .ingredient-name {
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* Стили для рейтинга */
+.rating-stars {
+    display: inline-flex;
+    gap: 0.2rem;
+}
+
+.rating-stars span {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.rating-stars span.active {
+    color: #ffd700;
+}
+
+/* Стили для таймера */
+.cooking-timer {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Стили для списка покупок */
+.shopping-list {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+}
+
+.shopping-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff4757;
+    cursor: pointer;
+}
+
+/* Стили для диалога шаринга */
+.share-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+.share-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.share-options button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили для подсказок */
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Стили для конвертера единиц */
+.unit-converter {
+    background: none;
+    border: none;
+    color: var(--dark-blue);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+}
+
+/* Анимации */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.cooking-done {
+    animation: pulse 1s infinite;
+} 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулінарні поради - Кулінарне мистецтво</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="porady.css">
+    <script src="porady.js" defer></script>
+</head>
+<body>
+    <nav class="side-nav">
+        <div class="nav-items">
+            <span><a href="index.html">ГОЛОВНА</a></span>
+            <span><a href="recipes.html">РЕЦЕПТИ</a></span>
+            <span><a href="porady.html">ПОРАДИ</a></span>
+            <span><a href="contacts.html">КОНТАКТИ</a></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tips-header">
+            <h1>Кулінарні поради</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук порад...">
+            </div>
+            <div class="tips-categories">
+                <button class="category-btn active" data-category="all">Усі поради</button>
+                <button class="category-btn" data-category="basic">Базові техніки</button>
+                <button class="category-btn" data-category="equipment">Обладнання</button>
+                <button class="category-btn" data-category="storage">Зберігання</button>
+            </div>
+        </section>
+
+        <section class="tips-grid">
+            <article class="tip-card" data-categories="basic,equipment">
+                <img src="image/knife.jpg" alt="Догляд за ножами">
+                <div class="tip-content">
+                    <div class="tip-tags">
+                        <span class="tag">Базові техніки</span>
+                        <span class="tag">Обладнання</span>
+                    </div>
+                    <h3>Як доглядати за ножами</h3>
+                    <p>Основні правила догляду за кухонними ножами</p>
+                    <button class="read-more-btn">Читати далі</button>
+                </div>
+                <div class="tip-details">
+                    <h4>Детальна інформація:</h4>
+                    <ul>
+                        <li>Регулярно точіть ножі</li>
+                        <li>Мийте вручну, не в посудомийній машині</li>
+                        <li>Зберігайте на спеціальній підставці</li>
+                        <li>Використовуйте відповідну дошку для різання</li>
+                    </ul>
+                    <button class="close-details-btn">Закрити</button>
+                </div>
+            </article>
+
+            <article class="tip-card" data-categories="storage">
+                <img src="image/products.jpg" alt="Зберігання продуктів">
+                <div class="tip-content">
+                    <div class="tip-tags">
+                        <span class="tag">Зберігання</span>
+                    </div>
+                    <h3>Правильне зберігання продуктів</h3>
+                    <p>Як зберігати продукти, щоб вони довше залишались свіжими</p>
+                    <button class="read-more-btn">Читати далі</button>
+                </div>
+                <div class="tip-details">
+                    <h4>Основні правила:</h4>
+                    <ul>
+                        <li>Контролюйте температуру холодильника</li>
+                        <li>Зберігайте продукти в герметичних контейнерах</li>
+                        <li>Не зберігайте разом несумісні продукти</li>
+                        <li>Регулярно перевіряйте терміни придатності</li>
+                    </ul>
+                    <button class="close-details-btn">Закрити</button>
+                </div>
+            </article>
+
+            <article class="tip-card" data-categories="equipment">
+                <img src="image/devices.jpg" alt="Кухонне приладдя">
+                <div class="tip-content">
+                    <div class="tip-tags">
+                        <span class="tag">Обладнання</span>
+                    </div>
+                    <h3>Необхідне кухонне приладдя</h3>
+                    <p>Список базового приладдя для домашньої кухні</p>
+                    <button class="read-more-btn">Читати далі</button>
+                </div>
+                <div class="tip-details">
+                    <h4>Базовий набір:</h4>
+                    <ul>
+                        <li>Набір ножів (шеф-ніж, універсальний, для хліба)</li>
+                        <li>Дошки для різання (окремо для м'яса та овочів)</li>
+                        <li>Каструлі різних розмірів</li>
+                        <li>Сковорідки (звичайна та антипригарна)</li>
+                    </ul>
+                    <button class="close-details-btn">Закрити</button>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html> 

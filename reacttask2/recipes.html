@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепти - Кулінарне мистецтво</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
+</head>
+<body>
+    <nav class="side-nav">
+        <div class="nav-items">
+            <span><a href="index.html">ГОЛОВНА</a></span>
+            <span><a href="recipes.html">РЕЦЕПТИ</a></span>
+            <span><a href="porady.html">ПОРАДИ</a></span>
+            <span><a href="contacts.html">КОНТАКТИ</a></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="recipes-header">
+            <h1>Наші рецепти</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук рецептів...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="popular-tags">
+                <span>Популярні запити:</span>
+                <a href="#" class="tag-link">Святкові страви</a>
+                <a href="#" class="tag-link">Пісні страви</a>
+                <a href="#" class="tag-link">Швидкі рецепти</a>
+                <a href="#" class="tag-link">Дієтичні страви</a>
+            </div>
+            <div class="categories">
+                <button class="category-btn active">Усі страви</button>
+                <button class="category-btn">Перші страви</button>
+                <button class="category-btn">Основні страви</button>
+                <button class="category-btn">Салати</button>
+                <button class="category-btn">Закуски</button>
+                <button class="category-btn">Десерти</button>
+                <button class="category-btn">Випічка</button>
+                <button class="category-btn">Напої</button>
+            </div>
+            <div class="filters">
+                <select class="filter-select">
+                    <option value="">Час приготування</option>
+                    <option value="30">До 30 хвилин</option>
+                    <option value="60">До 1 години</option>
+                    <option value="120">До 2 годин</option>
+                    <option value="121">Більше 2 годин</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Складність</option>
+                    <option value="easy">Легкий рівень</option>
+                    <option value="medium">Середній рівень</option>
+                    <option value="hard">Складний рівень</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Кухня</option>
+                    <option value="ukrainian">Українська</option>
+                    <option value="european">Європейська</option>
+                    <option value="asian">Азійська</option>
+                    <option value="mediterranean">Середземноморська</option>
+                </select>
+                <select class="filter-select">
+                    <option value="">Калорійність</option>
+                    <option value="low">Низька</option>
+                    <option value="medium">Середня</option>
+                    <option value="high">Висока</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="featured-recipe">
+            <div class="featured-content">
+                <span class="featured-label">Рецепт тижня</span>
+                <h2>Різдвяна кутя</h2>
+                <p>Традиційна українська різдвяна страва з пшениці, маку, меду та горіхів</p>
+                <div class="featured-meta">
+                    <span>⭐ 4.9</span>
+                    <span>⏱️ 180 хв</span>
+                    <span>👨‍🍳 Традиційний рецепт</span>
+                </div>
+                <button class="featured-btn">Дивитись рецепт</button>
+            </div>
+            <div class="featured-image">
+                <img src="image/kutya.png" alt="Різдвяна кутя">
+            </div>
+        </section>
+
+        <section class="recipes-grid">
+            <!-- Существующие рецепты -->
+            
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/cabbage_rols.jpg" alt="Голубці">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Основні страви</span>
+                        <span class="tag">Українська кухня</span>
+                    </div>
+                    <h3>Голубці з м'ясом</h3>
+                    <p>Соковиті голубці з м'ясом та рисом у томатному соусі</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 150 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 8 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.8 (92 відгуки)</span>
+                        <span>👁️ 734 перегляди</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/olivie.jpg" alt="Салат Олів'є">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Салати</span>
+                        <span class="tag">Святкові страви</span>
+                    </div>
+                    <h3>Салат Олів'є</h3>
+                    <p>Класичний святковий салат з додаванням домашнього майонезу</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 60 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 6 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.7 (156 відгуків)</span>
+                        <span>👁️ 1.5k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/blin4iki.avif" alt="Млинці">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Випічка</span>
+                        <span class="tag">Сніданок</span>
+                    </div>
+                    <h3>Млинці з начинкою</h3>
+                    <p>Тонкі млинці з різними начинками: сир, м'ясо, гриби</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 40 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.9 (203 відгуки)</span>
+                        <span>👁️ 2.1k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card new-recipe">
+                <div class="recipe-favorite">❤️</div>
+                <div class="new-label">Новий рецепт</div>
+                <img src="image/kotleta.jpg" alt="Котлета по-київськи">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Основні страви</span>
+                        <span class="tag">Українська кухня</span>
+                    </div>
+                    <h3>Котлета по-київськи</h3>
+                    <p>Соковита котлета з вершковим маслом та зеленню всередині</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 90 хв</span>
+                        <span>👨‍🍳 Складний рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.6 (45 відгуків)</span>
+                        <span>👁️ 512 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/vareniki.avif" alt="Вареники з вишнями">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Десерти</span>
+                        <span class="tag">Українська кухня</span>
+                    </div>
+                    <h3>Вареники з вишнями</h3>
+                    <p>Солодкі вареники з соковитими вишнями та ванільним соусом</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 60 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.9 (167 відгуків)</span>
+                        <span>👁️ 1.8k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/banosh.jpg" alt="Банош">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Основні страви</span>
+                        <span class="tag">Гуцульська кухня</span>
+                    </div>
+                    <h3>Банош з бринзою</h3>
+                    <p>Традиційна гуцульська страва з кукурудзяної крупи зі шкварками та бринзою</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 40 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.8 (89 відгуків)</span>
+                        <span>👁️ 945 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/sirniki.jpg" alt="Сирники">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Сніданок</span>
+                        <span class="tag">Десерти</span>
+                    </div>
+                    <h3>Сирники зі сметаною</h3>
+                    <p>Ніжні сирники з родзинками, подаються зі сметаною та медом</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 30 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.9 (234 відгуки)</span>
+                        <span>👁️ 2.3k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/gre4aniki.jpeg" alt="Гречаники">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Основні страви</span>
+                        <span class="tag">Українська кухня</span>
+                    </div>
+                    <h3>Гречаники з грибним соусом</h3>
+                    <p>Котлети з гречки та м'яса під ароматним грибним соусом</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 50 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 6 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.7 (156 відгуків)</span>
+                        <span>👁️ 1.2k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/yzvar.jpg" alt="Узвар">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Напої</span>
+                        <span class="tag">Святкові страви</span>
+                    </div>
+                    <h3>Узвар традиційний</h3>
+                    <p>Традиційний різдвяний напій із сушених фруктів та меду</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 120 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 8 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.8 (98 відгуків)</span>
+                        <span>👁️ 876 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/gre4ka.avif" alt="Гречана каша">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Основні страви</span>
+                        <span class="tag">Пісні страви</span>
+                    </div>
+                    <h3>Гречана каша з грибами</h3>
+                    <p>Розсипчаста гречана каша з смаженими грибами та цибулею</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 35 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.6 (145 відгуків)</span>
+                        <span>👁️ 1.1k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/vinigret.avif" alt="Вінігрет">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Салати</span>
+                        <span class="tag">Пісні страви</span>
+                    </div>
+                    <h3>Вінігрет класичний</h3>
+                    <p>Традиційний салат з варених овочів з додаванням квашеної капусти</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 40 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 6 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.7 (167 відгуків)</span>
+                        <span>👁️ 1.4k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/paska.avif" alt="Паска">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Випічка</span>
+                        <span class="tag">Святкові страви</span>
+                    </div>
+                    <h3>Великодня паска</h3>
+                    <p>Традиційна святкова паска з родзинками та цукатами</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 180 хв</span>
+                        <span>👨‍🍳 Складний рівень</span>
+                        <span>🍽️ 2 паски</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.9 (289 відгуків)</span>
+                        <span>👁️ 3.2k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Первые блюда -->
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/kapystniak.avif" alt="Капусняк">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Перші страви</span>
+                        <span class="tag">Українська кухня</span>
+                    </div>
+                    <h3>Капусняк з квашеної капусти</h3>
+                    <p>Наваристий український суп з квашеної капусти з копченостями</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 90 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 6 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.7 (123 відгуки)</span>
+                        <span>👁️ 890 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/yshka.jpg" alt="Юшка з риби">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Перші страви</span>
+                        <span class="tag">Рибні страви</span>
+                    </div>
+                    <h3>Юшка рибна з пшоном</h3>
+                    <p>Ароматна юшка з річкової риби з овочами та пшоном</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 60 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.8 (95 відгуків)</span>
+                        <span>👁️ 780 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/pozsolnik.jpg" alt="Розсольник">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Перші страви</span>
+                        <span class="tag">Українська кухня</span>
+                    </div>
+                    <h3>Розсольник по-полтавськи</h3>
+                    <p>Ситний суп з перловкою, солоними огірками та нирками</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 100 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 6 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.6 (87 відгуків)</span>
+                        <span>👁️ 650 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Напитки -->
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/kompot.jpg" alt="Компот із сухофруктів">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Напої</span>
+                        <span class="tag">Пісні страви</span>
+                    </div>
+                    <h3>Компот із сухофруктів</h3>
+                    <p>Корисний напій з яблук, груш, слив та інших сухофруктів</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 40 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 2 літри</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.7 (134 відгуки)</span>
+                        <span>👁️ 920 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/zbitok.jpg" alt="Збитень">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Напої</span>
+                        <span class="tag">Зимові напої</span>
+                    </div>
+                    <h3>Збитень медовий</h3>
+                    <p>Старовинний гарячий напій з медом та прянощами</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 30 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 1 літр</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.8 (92 відгуки)</span>
+                        <span>👁️ 760 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/kisel.jpg" alt="Кисіль">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Напої</span>
+                        <span class="tag">Десерти</span>
+                    </div>
+                    <h3>Кисіль з ягід</h3>
+                    <p>Традиційний густий напій з лісових ягід</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 25 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.6 (108 відгуків)</span>
+                        <span>👁️ 840 переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Закуски -->
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/forshmak.jpg" alt="Форшмак">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Закуски</span>
+                        <span class="tag">Єврейська кухня</span>
+                    </div>
+                    <h3>Форшмак класичний</h3>
+                    <p>Ніжна закуска з оселедця з яблуками та цибулею</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 20 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 6 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.7 (156 відгуків)</span>
+                        <span>👁️ 1.2k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/humus.jpg" alt="Хумус">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Закуски</span>
+                        <span class="tag">Пісні страви</span>
+                    </div>
+                    <h3>Хумус з нуту</h3>
+                    <p>Ароматна паста з нуту з кунжутною пастою та спеціями</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 30 хв</span>
+                        <span>👨‍🍳 Легкий рівень</span>
+                        <span>🍽️ 4 порції</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.8 (178 відгуків)</span>
+                        <span>👁️ 1.5k переглядів</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <div class="recipe-favorite">❤️</div>
+                <img src="image/pashtet.avif" alt="Паштет">
+                <div class="recipe-content">
+                    <div class="recipe-tags">
+                        <span class="tag">Закуски</span>
+                        <span class="tag">М'ясні страви</span>
+                    </div>
+                    <h3>Паштет з печінки</h3>
+                    <p>Ніжний паштет з курячої печінки з вершковим маслом та цибулею</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 45 хв</span>
+                        <span>👨‍🍳 Середній рівень</span>
+                        <span>🍽️ 8 порцій</span>
+                    </div>
+                    <div class="recipe-stats">
+                        <span>⭐ 4.9 (203 відгуки)</span>
+                        <span>👁️ 1.8k переглядів</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="recipe-collections">
+            <h2>Тематичні добірки</h2>
+            <div class="collections-grid">
+                <a href="#" class="collection-card">
+                    <img src="christmas.jpg" alt="Різдвяні страви">
+                    <div class="collection-content">
+                        <h3>Різдвяні страви</h3>
+                        <p>12 традиційних рецептів</p>
+                    </div>
+                </a>
+                <a href="#" class="collection-card">
+                    <img src="easter.jpg" alt="Великодні страви">
+                    <div class="collection-content">
+                        <h3>Великодні страви</h3>
+                        <p>15 святкових рецептів</p>
+                    </div>
+                </a>
+                <a href="#" class="collection-card">
+                    <img src="diet.jpg" alt="Дієтичні страви">
+                    <div class="collection-content">
+                        <h3>Дієтичні страви</h3>
+                        <p>20 корисних рецептів</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button class="pagination-btn">←</button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <span>...</span>
+            <button class="pagination-btn">12</button>
+            <button class="pagination-btn">→</button>
+        </div>
+    </main>
+</body>
+</html> 

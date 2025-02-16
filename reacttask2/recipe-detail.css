@@ -1,0 +1,398 @@
+.recipe-detail {
+    margin-left: 80px;
+    padding: 0;
+    background: var(--gray);
+}
+
+/* Герой секция */
+.recipe-hero {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 4rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.recipe-hero-content {
+    flex: 1;
+}
+
+.recipe-breadcrumbs {
+    margin-bottom: 2rem;
+}
+
+.recipe-breadcrumbs a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.recipe-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.recipe-hero-image {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.recipe-meta-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.recipe-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Основной контент */
+.recipe-content-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+.recipe-main-content {
+    flex: 1;
+}
+
+/* Обзор рецепта */
+.recipe-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.recipe-info-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.info-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Ингредиенты */
+.recipe-ingredients {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.servings-control {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.servings-btn {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ingredients-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ingredient-amount {
+    color: #666;
+    min-width: 80px;
+}
+
+/* Инструкции */
+.instruction-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.step-number {
+    background: var(--dark-blue);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.step-tips {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Пищевая ценность */
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.nutrition-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nutrition-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-blue);
+    display: block;
+}
+
+/* Комментарии */
+.recipe-comments {
+    background: var(--white);
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+}
+
+.comment-form {
+    margin: 2rem 0;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.comment-meta {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .recipe-hero {
+        flex-direction: column;
+    }
+
+    .recipe-hero-image {
+        max-width: 100%;
+    }
+
+    .recipe-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-hero {
+        padding: 2rem;
+    }
+
+    .recipe-content-wrapper {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .recipe-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .recipe-meta-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Добавим к существующим стилям */
+
+.recipe-hero-gallery {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recipe-gallery {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.recipe-gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.recipe-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.recipe-actions {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+.cooking-timer {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rating-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.shopping-list-btn {
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-shopping-list {
+    background: none;
+    border: none;
+    color: var(--dark-blue);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .recipe-gallery {
+        flex-wrap: wrap;
+    }
+
+    .recipe-actions {
+        flex-wrap: wrap;
+    }
+
+    .recipe-hero-gallery {
+        margin-top: 2rem;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+} 

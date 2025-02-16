@@ -1,0 +1,507 @@
+/* Основные стили */
+.tips-header {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 2rem 4rem;
+}
+
+.tips-categories {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-btn.active {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+/* Карточки советов */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+.tip-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tip-content {
+    padding: 1.5rem;
+}
+
+.tip-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+/* Видео-совет */
+.video-tip .video-preview {
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Категории советов */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-card p {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+/* Эксперты */
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+.expert-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.expert-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.expert-info {
+    padding: 1.5rem;
+}
+
+.view-tips {
+    color: var(--dark-blue);
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .tips-header {
+        padding: 2rem;
+    }
+
+    .tips-grid {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        aspect-ratio: 16/9;
+    }
+}
+
+/* Календарь советов */
+.tips-calendar {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.calendar-day {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-day.active {
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+/* Интерактивные подсказки */
+.interactive-card {
+    position: relative;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.interactive-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.interactive-card:hover .card-back {
+    transform: rotateY(360deg);
+}
+
+/* FAQ секция */
+.faq-item {
+    background: var(--white);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Калькулятор */
+.calculator-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.calculate-btn {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.calculate-btn:hover {
+    opacity: 0.9;
+}
+
+/* Улучшенные стили для поиска */
+.search-bar {
+    margin: 1rem 0;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Стили для результатов калькулятора */
+.calculator-result {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.calculator-result::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.calculator-result table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+.calculator-result th,
+.calculator-result td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Улучшенные стили для календаря */
+.calendar-day {
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-day::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--dark-blue);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.calendar-day:hover::before {
+    transform: scaleX(1);
+}
+
+/* Стили для заметок */
+.note-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interactive-card:hover .note-btn {
+    opacity: 1;
+}
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Улучшенные стили для интерактивных карточек */
+.interactive-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.interactive-card.flipped .card-back {
+    transform: rotateY(0);
+}
+
+.measures-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.measures-table th,
+.measures-table td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Стили для поиска в FAQ */
+.faq-section input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 2px solid var(--dark-blue);
+    border-radius: 8px;
+}
+
+/* Подсветка результатов поиска */
+mark {
+    background: #ffd700;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Стили для детальной информации */
+.tip-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+    max-width: 500px;
+    width: 90%;
+}
+
+.tip-details.active {
+    display: block;
+}
+
+.tip-details h4 {
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+.tip-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tip-details li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tip-details li:last-child {
+    border-bottom: none;
+}
+
+.close-details-btn {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Затемнение фона при открытии деталей */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.read-more-btn {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.read-more-btn:hover {
+    opacity: 0.9;
+} 
